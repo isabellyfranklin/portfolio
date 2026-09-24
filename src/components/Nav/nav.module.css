@@ -1,0 +1,122 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  /* Backgrounds */
+  --color-bg-primary: #0a0a0a;
+  --color-bg-card: #111111;
+  --color-bg-card-dark: #161616;
+
+  /* Borders */
+  --color-border-divider: #1a1a1a;
+  --color-border-subtle: #222222;
+
+  /* Accent (pink) */
+  --color-accent: #f0a8bc;
+  --color-accent-hover: #f7cdd8;
+
+  /* Text */
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #cccccc;
+  --color-text-muted: #888888;
+  --color-text-subtle: #666666;
+  --color-text-faint: #555555;
+  --color-text-ghost: #333333;
+
+  /* Project preview backgrounds */
+  --color-preview-lumi-dashboard: #1a1018;
+  --color-preview-petala-store: #0f1a18;
+  --color-preview-devlinks: #101018;
+  --color-preview-fokus-timer: #181018;
+}
+
+.mainHeader{
+    width: 100%;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 13px;
+    color: var(--color-accent);
+    margin-top: 8px;
+}
+
+.mobile{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 17px;
+    top: 20px;
+}
+
+.mobile .lines{
+    background-color: var(--color-text-primary);
+    width:25px;
+    height: 2px;
+}
+
+.navbar{
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 17px;
+    margin-right: 30px;
+}
+
+.navbar li {
+    list-style: none;
+}
+
+.navbar a{
+    color: var(--color-text-faint);
+    text-decoration: none;
+    transition: color 200ms ease;
+}
+
+.navbar a:hover {
+    color: var(--color-accent);
+}
+
+@media (max-width: 700px) {
+
+    .logo{
+        margin-top: 3px;
+        font-size: 1.3rem;
+    }
+
+    .mobile{
+        display: flex;
+    }
+
+    .navbar{
+        width: 90%;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        text-align: left;
+        margin-left: 20px;
+        background-color: var(--color-bg-primary);
+        padding: 20px 0;
+        gap: 10px;
+        border-top:solid 1px var(--color-text-faint) ;
+        border-bottom:solid 1px var(--color-text-faint) ;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+}
