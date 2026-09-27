@@ -1,4 +1,5 @@
 import style from "./Hero.module.css";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export function Hero() {
   return (
@@ -14,9 +15,27 @@ export function Hero() {
         </span>
       </p>
 
-      <a href="#projetos" className={style.button}>
-        Ver Projetos ↗
-      </a>
+      <div className={style.heroIcons}>
+        <a href="#projetos" className={style.button}>
+          Ver Projetos ↗
+        </a>
+
+        <a className={style.heroSocialMedia} 
+          href="https://github.com/isabellyfranklin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </a>
+        
+        <a className={style.heroSocialMedia}
+          href="https://linkedin.com/in/isabellyfranklin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaLinkedin />
+        </a>
+      </div>
     </section>
   );
 }
