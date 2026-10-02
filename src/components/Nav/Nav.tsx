@@ -17,16 +17,16 @@ export function Nav(){
                     <a href="#">
                         <li>Inico</li>
                     </a>
-                    <a href="#">
+                    <a href="#about">
                         <li>Sobre</li>
                     </a>
-                    <a href="#">
+                    <a href="#certificates">
                         <li>Certificaçoes</li>
                     </a>
-                    <a href="#">
+                    <a href="#project">
                         <li>Projetos</li>
                     </a>
-                    <a href="#">
+                    <a href="#contact">
                         <li>Contato</li>
                     </a>
             </ul>

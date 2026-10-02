@@ -1,59 +1,104 @@
+import { motion } from "motion/react";
 import style from "./About.module.css";
-import myPhoto from "../../assets/Minha foto do linkdin.jpeg"
+import myPhoto from "../../assets/Minha foto do linkdin.jpeg";
 
-export function About() { 
-
+export function About() {
   return (
-    <section className={style.about}>
-      <span className={style.sectionLabel}>SOBRE</span>
+    <section className={style.about} id="about">
+      
+      <motion.span
+        className={style.sectionLabel}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+      >
+        SOBRE
+      </motion.span>
 
       <div className={style.grid}>
-        <div className={style.photoWrapper}>
-          <img className={style.photo} src={myPhoto} alt="Foto de Isabelly Franklin" />
-        </div>
 
-        <div className={style.contentAbout}>
-          <h2 className={style.titleAbout}>
+        {/* FOTO */}
+        <motion.div
+          className={style.photoWrapper}
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <img
+            className={style.photo}
+            src={myPhoto}
+            alt="Foto de Isabelly Franklin"
+          />
+        </motion.div>
+
+        {/* CONTEÚDO */}
+        <motion.div
+          className={style.contentAbout}
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+
+          <motion.h2
+            className={style.titleAbout}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Código com <span className={style.textPink}>propósito</span>
-          </h2>
+          </motion.h2>
 
-          <div className={style.textGroup}>
+          <motion.div
+            className={style.textGroup}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
             <p className={style.textAbout}>
-              Sou Isabelly Franklin, desenvolvedora front-end apaixonada por
-              transformar ideias em interfaces que as pessoas realmente gostam
-              de usar. Comecei minha jornada na programação após descobrir que o
-              design e a lógica podiam andar juntos, e desde então não parei
-              mais.
+              Sou Isabelly, desenvolvedora front-end apaixonada por transformar ideias em interfaces intuitivas que as pessoas realmente gostam de usar. Comecei minha jornada na programação ao descobrir que design e lógica podem caminhar juntos e, desde então, não parei mais.
             </p>
-            <p className={style.textAbout}>
-              Estudo e desenvolvo principalmente com React, além de JavaScript,
-              HTML e CSS, e venho me aprofundando em TypeScript, acessibilidade
-              e design systems. Acredito que uma boa interface não precisa
-              gritar para ser bonita; às vezes o que faz diferença é exatamente
-              o que você escolhe tirar.
-            </p>
-            <p className={style.textAbout}>
-              Quando não estou codando, estou estudando UX, assistindo séries ou
-              explorando novas ferramentas que me ajudem a construir produtos
-              melhores.
-            </p>
-          </div>
 
-          <div className={style.stats}>
+            <p className={style.textAbout}>
+              Desenvolvo principalmente com React, JavaScript, TypeScript, HTML e CSS, e tenho aprofundado meus estudos em Node.js. Acredito que uma boa interface não precisa gritar para ser bonita, às vezes, o que faz a diferença é exatamente o que você escolhe tirar.
+            </p>
+
+            <p className={style.textAbout}>
+              Quando não estou codando, gosto de estudar UX, ler livros,  ouvir músicas e mergulhar em conteúdos em inglês e russo,  de vídeos a séries e filmes.
+            </p>
+          </motion.div>
+
+          {/* STATS */}
+          <motion.div
+            className={style.stats}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
+
             <div className={style.stat}>
               <p className={style.statNumber}>4+</p>
               <p className={style.statLabel}>Certificações</p>
             </div>
+
             <div className={style.stat}>
               <p className={style.statNumber}>JavaScript & React & TS</p>
               <p className={style.statLabel}>Foco de Estudo</p>
             </div>
+
             <div className={style.stat}>
               <p className={style.statNumber}>4+</p>
               <p className={style.statLabel}>Projetos Pessoais</p>
             </div>
-          </div>
-        </div>
+
+          </motion.div>
+
+        </motion.div>
       </div>
     </section>
   );

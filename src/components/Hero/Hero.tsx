@@ -32,7 +32,7 @@ export function Hero() {
   );
 
   return (
-    <section ref={containerRef} className={style.hero}>
+    <section ref={containerRef} className={style.hero} id="hero">
       <span className={style.portfolio}>PORTFÓLIO</span>
 
       <h1>

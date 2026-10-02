@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import style from "./Projects.module.css";
 
 interface ProjectCardProps {
@@ -18,12 +19,29 @@ export function ProjectCard({
   previewColor,
 }: ProjectCardProps) {
   return (
-    <div className={style.card}>
+    <motion.div
+      className={style.card}
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: 50,
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+        },
+      }}
+      transition={{
+        duration: 0.7,
+        ease: "easeOut",
+      }}
+    >
       <div className={style.preview} style={{ backgroundColor: previewColor }}>
         <span className={style.previewTitle}>{title}</span>
       </div>
 
       <h3 className={style.cardTitle}>{title}</h3>
+
       <p className={style.description}>{description}</p>
 
       <div className={style.tags}>
@@ -36,10 +54,16 @@ export function ProjectCard({
 
       <div className={style.links}>
         {repoUrl && (
-          <a href={repoUrl} target="_blank" rel="noopener noreferrer" className={style.link}>
+          <a
+            href={repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.link}
+          >
             Repositório
           </a>
         )}
+
         {demoUrl && (
           <a
             href={demoUrl}
@@ -51,6 +75,6 @@ export function ProjectCard({
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }

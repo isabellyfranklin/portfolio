@@ -44,10 +44,16 @@
 .mainHeader{
     font-family: var(--main-font);
     width: 100%;
+    background-color: var(--color-bg-primary);
     min-height: 80px;
+    position: relative;
     display: flex;
     justify-content: space-between;
-    position: relative;
+    
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo{
