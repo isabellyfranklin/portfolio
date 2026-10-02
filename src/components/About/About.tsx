@@ -64,7 +64,7 @@ export function About() {
             </p>
 
             <p className={style.textAbout}>
-              Desenvolvo principalmente com React, JavaScript, TypeScript, HTML e CSS, e tenho aprofundado meus estudos em Node.js. Acredito que uma boa interface não precisa gritar para ser bonita, às vezes, o que faz a diferença é exatamente o que você escolhe tirar.
+              Desenvolvo principalmente com <b>React, JavaScript, TypeScript, HTML e CSS,</b> e tenho aprofundado meus estudos em <b>Node.js</b>. Acredito que uma boa interface não precisa gritar para ser bonita, às vezes, o que faz a diferença é exatamente o que você escolhe tirar.
             </p>
 
             <p className={style.textAbout}>
