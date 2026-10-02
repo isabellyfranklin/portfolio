@@ -1,14 +1,15 @@
-//import myPhoto from "../../assets/minha-foto.jpg";
 import style from "./About.module.css";
+import myPhoto from "../../assets/Minha foto do linkdin.jpeg"
 
-export function About() {
+export function About() { 
+
   return (
     <section className={style.about}>
       <span className={style.sectionLabel}>SOBRE</span>
 
       <div className={style.grid}>
         <div className={style.photoWrapper}>
-          <img className={style.photo} src="" alt="Foto de Isabelly Franklin" />
+          <img className={style.photo} src={myPhoto} alt="Foto de Isabelly Franklin" />
         </div>
 
         <div className={style.contentAbout}>
@@ -19,16 +20,17 @@ export function About() {
           <div className={style.textGroup}>
             <p className={style.textAbout}>
               Sou Isabelly Franklin, desenvolvedora front-end apaixonada por
-              transformar ideias em interfaces que as pessoas realmente gostam de
-              usar. Comecei minha jornada na programação após descobrir que o design
-              e a lógica podiam andar juntos, e desde então não parei mais.
+              transformar ideias em interfaces que as pessoas realmente gostam
+              de usar. Comecei minha jornada na programação após descobrir que o
+              design e a lógica podiam andar juntos, e desde então não parei
+              mais.
             </p>
             <p className={style.textAbout}>
-              Estudo e desenvolvo principalmente com React, além de JavaScript, HTML
-              e CSS, e venho me aprofundando em TypeScript, acessibilidade e design
-              systems. Acredito que uma boa interface não precisa gritar para ser
-              bonita; às vezes o que faz diferença é exatamente o que você escolhe
-              tirar.
+              Estudo e desenvolvo principalmente com React, além de JavaScript,
+              HTML e CSS, e venho me aprofundando em TypeScript, acessibilidade
+              e design systems. Acredito que uma boa interface não precisa
+              gritar para ser bonita; às vezes o que faz diferença é exatamente
+              o que você escolhe tirar.
             </p>
             <p className={style.textAbout}>
               Quando não estou codando, estou estudando UX, assistindo séries ou
