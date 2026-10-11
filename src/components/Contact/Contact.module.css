@@ -30,6 +30,11 @@
     align-items: center;
 }
 
+.contact::selection{
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+}
+
 .grid{
     width: 100%;
     display: grid;

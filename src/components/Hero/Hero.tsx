@@ -33,6 +33,7 @@ export function Hero() {
 
   return (
     <section ref={containerRef} className={style.hero} id="hero">
+      <span className={style.sigla}>IF</span>
       <span className={style.portfolio}>PORTFÓLIO</span>
 
       <h1>

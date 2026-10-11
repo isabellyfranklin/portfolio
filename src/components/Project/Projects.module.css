@@ -27,6 +27,11 @@
     padding-inline: 7rem;
 }
 
+.projects::selection{
+    background-color: var(--color-accent);
+    color: var(--color-bg-primary);
+}
+
 .mainTitle{
     display: flex;
     align-items: center;
