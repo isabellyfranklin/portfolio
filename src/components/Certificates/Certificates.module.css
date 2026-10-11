@@ -89,7 +89,6 @@
 
 .card:hover{
   background-color: rgba(105, 99, 99, 0.195);
-  border-color: var(--color-accent);
 }
 
 .headerCard{
